@@ -11,7 +11,7 @@ source:
   sha256: 0cb4478d33090cdd2aad138e6f8b672a289cc76fd6c6313a63155f60c12ae6af
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,7 +21,6 @@ requirements:
     - python >=3.6
     - jupyter-packaging >=0.10,<2
   run:
-    - jupyterlab >=3.0,<4
     - python >=3.6
 
 test:
