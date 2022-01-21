@@ -1,5 +1,5 @@
 {% set name = "jupyterlab-js-logs" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f1453bf590aea08a9e899adb08ca3cc1016013308d7a4e1a5bc5e53da9bd188f
+  sha256: 5be120b9763ab5988a7df8757f37b2e4ba06aca8b3711ed53a002e326bb13177
 
 build:
   number: 0
