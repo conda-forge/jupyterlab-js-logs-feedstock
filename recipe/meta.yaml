@@ -7,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: b0e03217f579f95b640192ed4d8844103a8c88780d82e9ad11ce932a7163f03a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - jupyter-packaging >=0.10,<2
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   commands:
@@ -30,6 +30,7 @@ test:
     - if exist %PREFIX%\\share\\jupyter\\labextensions\\jupyterlab-js-logs\\package.json (exit 0) else (exit 1)          # [win]
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/QuantStack/jupyterlab-js-logs
