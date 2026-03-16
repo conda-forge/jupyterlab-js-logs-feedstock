@@ -35,7 +35,7 @@ test:
     - python {{ python_min }}
 
 about:
-  home: https://github.com/QuantStack/jupyterlab-js-logs
+  home: https://github.com/jupyterlab-contrib/jupyterlab-js-logs
   summary: JupyterLab extension to show the logs from the browser developer tools console
   license: BSD-3-Clause
   license_file: LICENSE
